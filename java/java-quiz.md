@@ -236,7 +236,7 @@ class Main {
 }
 ```
 - The code does not compile.
-- A runtime exception is thrown
+- A runtime exception is thrown.
 - "world!!world"
 - "world!world!"
 
@@ -255,5 +255,96 @@ Iterator iterator = pencilCase.iterator();
 for(){iterator.hasNext()}{}
 ```
 
-#### Q18. Fill in the blanks?
-- Object-oriented programming (OOP) is a programming language model that organizes software design around (objects), rather than (functions).
+#### Q18. Object-oriented programming is a style of programming where you organize your program around ____ rather than ____ and data rather than logic.
+- actions; functions
+- actions; objects
+- functions; actions
+- objects; actions
+
+#### Q19. Which letters will print when this code is run?
+```
+public static void main(String[] args) {
+   try {
+      System.out.println("A");
+      badMethod();
+      System.out.println("B");
+   } catch (Exception ex) {
+      System.out.println("C");
+   } finally {
+      System.out.println("D");
+   }
+}
+public static void badMethod() {
+   throw new Error();
+}
+```
+- A, C, and D
+- A and D
+- C and D
+- A, B, and D
+
+#### Q20. You have an ArrayList of names that you want to sort alphabetically. Which approach would NOT work?
+- names.sort(Comparator.comparing(String::toString))
+- names.sort(List.DESCENDING)
+- names.stream().sorted((sl, s2) -> s1.compareTo(s2)).collect(Collectors.toList())
+- Collections.sort(names)
+
+#### Q21. How many times will this code print "Hello World!"?
+```
+class Main {
+  public static void main(String[] args){
+    for (int i=O; i<10; i=i++) {
+      i+=1;
+      System.out.println("Hello World!");
+    }
+  }
+}
+```
+- 10 times
+- infinite number of times
+- 9 times
+- 5 times
+
+#### Q22. What is the result of this code?
+```
+try{
+  System.out.print("Hello World");
+}catch(Exception e){
+  System.out.println("e");
+}catch(ArithmeticException e){
+  System.out.println("e");
+}finally{
+  System.out.println("!");
+}
+```
+- Hello World!
+- It will throw a runtime exception.
+- Hello World
+- It will not compile.
+
+#### Q23. Which for loop is invalid?
+- for (;;){}
+- for(i=3; i<=3; i++){}
+- for(int i; i==2; i++){}
+- for(int x=1; x<-10; x--){}
+
+#### Q24. Which statement is NOT true?
+- An anonymous class does not require a zero-argument constructor.
+- An anonymous class may specify both an abstract class and interface as base types.
+- An anonymous class may specify an interface as its base type.
+- An anonymous class may specify an abstract base class as its base type.
+
+#### Q25. What does this code print?
+```
+System.out.print("apple".compareTo("banana"));
+```
+- a positive number
+- false
+- a negative number
+- 0
+
+#### Q26. What code would you use to tell if "schwifty" is of type String?
+- "schwifty" instanceof String
+- "schwifty".getType() == String
+- "schwifty".getClass().getSimpleName() == "String"
+- "schwifty".getType().equals("String")
